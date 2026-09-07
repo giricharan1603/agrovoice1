@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AgroVoice — Voice-first Logistics for Farmers</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">🌾 AgroVoice</div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="new-shipment.html">New Shipment</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <h1>Ship your produce with just your voice.</h1>
+    <p class="lede">
+      AgroVoice helps Indian farmers book trucks in their own language —
+      no forms, no typing. Powered by Oracle 11g.
+    </p>
+    <a class="btn btn-primary" href="new-shipment.html">Book a shipment</a>
+    <a class="btn btn-ghost" href="dashboard.html">View shipments</a>
+
+    <section class="features">
+      <div class="feature"><h3>🎙️ Voice-first</h3><p>Speak in Hindi, Tamil, Telugu, Marathi, English.</p></div>
+      <div class="feature"><h3>🚚 Smart matching</h3><p>Find trucks headed the right way.</p></div>
+      <div class="feature"><h3>💾 Oracle-backed</h3><p>Reliable storage on your Oracle 11g database.</p></div>
+    </section>
+
+    <p id="api-status" class="status">Checking backend…</p>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script>AgroVoice.checkHealth();</script>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCzaXytAbiCOp89WgIZdMx29yZky7TRkX0",
+    authDomain: "agro-voice-ca0f7.firebaseapp.com",
+    projectId: "agro-voice-ca0f7",
+    storageBucket: "agro-voice-ca0f7.firebasestorage.app",
+    messagingSenderId: "889306883369",
+    appId: "1:889306883369:web:703848d019b64d75470338",
+    measurementId: "G-TK63G52QEQ"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>

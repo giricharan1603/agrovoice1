@@ -1,0 +1,19 @@
+{
+  "name": "agrovoice-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check db.js && node --check server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "oracledb": "^6.6.0"
+  },
+  "allowScripts": {
+    "oracledb@6.10.0": true
+  }
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a7f3d0" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded Circle Shield -->
+  <rect x="5" y="5" width="90" height="90" rx="28" fill="url(#bgGrad)" />
+
+  <!-- Agriculture Sprout & Mic Hybrid Icon -->
+  <path d="M50 20 C 65 20, 75 35, 75 52 C 75 62, 65 72, 50 72 C 35 72, 25 62, 25 52 C 25 35, 35 20, 50 20 Z" fill="url(#leafGrad)" />
+  <path d="M50 20 C 50 40, 50 60, 50 80" stroke="#047857" stroke-width="5" stroke-linecap="round" />
+
+  <!-- Mic Outline Inside Sprout -->
+  <rect x="42" y="34" width="16" height="24" rx="8" fill="#ffffff" />
+  <path d="M36 46 A 14 14 0 0 0 64 46" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" />
+  <line x1="50" y1="60" x2="50" y2="68" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+</svg>

@@ -1,0 +1,261 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * AgroVoice design system.
+ *
+ * Palette identity: agricultural — deep field-green primary, warm soil accents,
+ * cool sky supporting color. All colors use oklch.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-sans:
+    "Inter", "Noto Sans", "Noto Sans Devanagari", "Noto Sans Telugu",
+    "Noto Sans Tamil", "Noto Sans Kannada", ui-sans-serif, system-ui,
+    sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  /* AgroVoice brand palette */
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-muted: var(--brand-muted);
+  --color-soil: var(--soil);
+  --color-soil-foreground: var(--soil-foreground);
+  --color-sky: var(--sky);
+  --color-sky-foreground: var(--sky-foreground);
+
+  /* Status tokens */
+  --color-status-pending: var(--status-pending);
+  --color-status-matched: var(--status-matched);
+  --color-status-confirmed: var(--status-confirmed);
+  --color-status-transit: var(--status-transit);
+  --color-status-delivered: var(--status-delivered);
+  --color-status-cancelled: var(--status-cancelled);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  --background: oklch(0.99 0.005 120);
+  --foreground: oklch(0.22 0.03 155);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.03 155);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.03 155);
+
+  --primary: oklch(0.52 0.16 148);
+  --primary-foreground: oklch(0.99 0.005 120);
+
+  --secondary: oklch(0.96 0.02 130);
+  --secondary-foreground: oklch(0.30 0.06 150);
+
+  --muted: oklch(0.96 0.015 130);
+  --muted-foreground: oklch(0.50 0.03 155);
+
+  --accent: oklch(0.94 0.05 90);
+  --accent-foreground: oklch(0.30 0.08 60);
+
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.99 0.005 120);
+
+  --border: oklch(0.90 0.02 140);
+  --input: oklch(0.90 0.02 140);
+  --ring: oklch(0.52 0.16 148);
+
+  /* Brand */
+  --brand: oklch(0.52 0.16 148);
+  --brand-foreground: oklch(0.99 0.005 120);
+  --brand-muted: oklch(0.94 0.06 145);
+
+  --soil: oklch(0.62 0.13 65);
+  --soil-foreground: oklch(0.99 0.005 90);
+
+  --sky: oklch(0.62 0.13 235);
+  --sky-foreground: oklch(0.99 0.005 235);
+
+  /* Status */
+  --status-pending: oklch(0.75 0.14 75);
+  --status-matched: oklch(0.62 0.13 235);
+  --status-confirmed: oklch(0.55 0.16 148);
+  --status-transit: oklch(0.65 0.12 210);
+  --status-delivered: oklch(0.55 0.02 155);
+  --status-cancelled: oklch(0.60 0.20 27);
+
+  --chart-1: oklch(0.55 0.16 148);
+  --chart-2: oklch(0.62 0.13 65);
+  --chart-3: oklch(0.62 0.13 235);
+  --chart-4: oklch(0.75 0.14 75);
+  --chart-5: oklch(0.50 0.10 300);
+
+  --sidebar: oklch(0.98 0.01 140);
+  --sidebar-foreground: oklch(0.22 0.03 155);
+  --sidebar-primary: oklch(0.52 0.16 148);
+  --sidebar-primary-foreground: oklch(0.99 0.005 120);
+  --sidebar-accent: oklch(0.94 0.03 140);
+  --sidebar-accent-foreground: oklch(0.30 0.06 150);
+  --sidebar-border: oklch(0.90 0.02 140);
+  --sidebar-ring: oklch(0.52 0.16 148);
+}
+
+.dark {
+  --background: oklch(0.16 0.02 155);
+  --foreground: oklch(0.97 0.01 140);
+  --card: oklch(0.20 0.03 155);
+  --card-foreground: oklch(0.97 0.01 140);
+  --popover: oklch(0.20 0.03 155);
+  --popover-foreground: oklch(0.97 0.01 140);
+  --primary: oklch(0.72 0.16 148);
+  --primary-foreground: oklch(0.15 0.03 155);
+  --secondary: oklch(0.28 0.03 150);
+  --secondary-foreground: oklch(0.97 0.01 140);
+  --muted: oklch(0.28 0.03 150);
+  --muted-foreground: oklch(0.70 0.02 145);
+  --accent: oklch(0.30 0.05 90);
+  --accent-foreground: oklch(0.97 0.01 140);
+  --destructive: oklch(0.70 0.20 22);
+  --destructive-foreground: oklch(0.99 0.005 120);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.72 0.16 148);
+  --brand: oklch(0.72 0.16 148);
+  --brand-foreground: oklch(0.15 0.03 155);
+  --brand-muted: oklch(0.32 0.06 148);
+  --soil: oklch(0.72 0.13 65);
+  --soil-foreground: oklch(0.15 0.03 155);
+  --sky: oklch(0.72 0.13 235);
+  --sky-foreground: oklch(0.15 0.03 155);
+  --status-pending: oklch(0.78 0.14 75);
+  --status-matched: oklch(0.72 0.13 235);
+  --status-confirmed: oklch(0.72 0.16 148);
+  --status-transit: oklch(0.72 0.12 210);
+  --status-delivered: oklch(0.70 0.02 155);
+  --status-cancelled: oklch(0.72 0.20 22);
+  --chart-1: oklch(0.72 0.16 148);
+  --chart-2: oklch(0.72 0.13 65);
+  --chart-3: oklch(0.72 0.13 235);
+  --chart-4: oklch(0.78 0.14 75);
+  --chart-5: oklch(0.65 0.15 300);
+  --sidebar: oklch(0.18 0.03 155);
+  --sidebar-foreground: oklch(0.97 0.01 140);
+  --sidebar-primary: oklch(0.72 0.16 148);
+  --sidebar-primary-foreground: oklch(0.15 0.03 155);
+  --sidebar-accent: oklch(0.28 0.03 150);
+  --sidebar-accent-foreground: oklch(0.97 0.01 140);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.72 0.16 148);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+}
+
+@utility bg-brand-gradient {
+  background-image: linear-gradient(
+    135deg,
+    oklch(0.55 0.16 148) 0%,
+    oklch(0.45 0.14 155) 100%
+  );
+}
+
+@utility bg-soil-gradient {
+  background-image: linear-gradient(
+    135deg,
+    oklch(0.65 0.14 65) 0%,
+    oklch(0.50 0.12 45) 100%
+  );
+}
+
+@utility bg-amber-gradient {
+  background-image: linear-gradient(
+    135deg,
+    #f59e0b 0%,
+    #d97706 100%
+  );
+}
+
+@utility bg-sky-gradient {
+  background-image: linear-gradient(
+    135deg,
+    #0284c7 0%,
+    #0369a1 100%
+  );
+}
+
+@utility glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass-card {
+  background: rgba(20, 25, 22, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Leaflet Marker Fixes */
+.leaflet-container {
+  font-family: inherit !important;
+  z-index: 10 !important;
+}
+
+.custom-leaflet-truck, .custom-leaflet-pickup, .custom-leaflet-mandi {
+  background: transparent;
+  border: none;
+}
+

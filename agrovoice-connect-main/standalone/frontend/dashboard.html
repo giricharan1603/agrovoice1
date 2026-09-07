@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — AgroVoice</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">🌾 AgroVoice</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="new-shipment.html">New Shipment</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Shipments</h1>
+    <p class="muted">Live data from your Oracle 11g database.</p>
+    <div id="shipments" class="card">Loading…</div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script>AgroVoice.loadShipments();</script>
+</body>
+</html>
